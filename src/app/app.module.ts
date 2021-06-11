@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestModelComponent } from './test-model/test-model.component';
-import {MyDetectorComponent} from 'my-detector';
+import { MyDetectorModule } from 'my-detector';
 import { MatButtonModule, MatProgressBarModule, MatSlideToggleModule, MatToolbarModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
@@ -13,7 +13,6 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     TestModelComponent,
-    MyDetectorComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     MatProgressBarModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MyDetectorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
