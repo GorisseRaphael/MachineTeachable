@@ -1,0 +1,42 @@
+<!-- <div #video id="webcam-container"></div> -->
+
+<div class="form-group">
+    <label for="file">Choisir les 3 fichiers : metadata.json en 1er, model.json en 2e et weights.bin en 3e</label>
+    <input class="center" type="file" id="file" #file (change)="handleFileInput($event.target.files)" multiple>
+</div>
+
+
+<div class="video-container">
+    <mat-slide-toggle class="slide" [(ngModel)]="isChecked" (change)="changePlay()">{{pausePlay}}</mat-slide-toggle>
+    <div class="video">
+        <video #video autoplay height='260px' width='300px'></video>
+    </div>
+</div>
+
+
+<!-- <lib-my-detector></lib-my-detector>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+<script type="text/javascript">
+
+</script> -->
+<table class="tableau">
+    <tr *ngFor="let item of predictions">
+        <td>
+            {{item.className}}
+        </td>
+        <td>
+            <div class='outer'>
+                <mat-progress-bar class="example-margin" [color]="color" [mode]="mode" [value]="item.probability * 100"
+                    [bufferValue]="bufferValue">
+                </mat-progress-bar>
+            </div>
+
+        </td>
+        <td>
+            <div class='inner' style="width: {{item.probability}} %">
+                {{item.probability * 100 | number: '1.0-0'}}
+            </div>
+        </td>
+    </tr>
+</table>

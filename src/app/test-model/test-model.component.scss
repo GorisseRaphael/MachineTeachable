@@ -1,0 +1,46 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+
+.center {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
+
+.slide {
+  display: flex;
+  align-self: center;
+}
+
+.video {
+  display: flex;
+  align-self: center;
+}
+
+.tableau {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.outer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.example-margin {
+  margin-left: 30px;
+  margin-right: 30px;
+  width: 200px;
+}
